@@ -1,0 +1,328 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'motel_model.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+
+MotelModel _$MotelModelFromJson(Map<String, dynamic> json) {
+  return _MotelModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MotelModel {
+  String get name => throw _privateConstructorUsedError;
+  String get logo => throw _privateConstructorUsedError;
+  String get neighborhood => throw _privateConstructorUsedError;
+  double get distance => throw _privateConstructorUsedError;
+  int get favoritesCount => throw _privateConstructorUsedError;
+  List<SuiteModel> get suites => throw _privateConstructorUsedError;
+  int get reviewsCount => throw _privateConstructorUsedError;
+  double get rating => throw _privateConstructorUsedError;
+
+  /// Serializes this MotelModel to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of MotelModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MotelModelCopyWith<MotelModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MotelModelCopyWith<$Res> {
+  factory $MotelModelCopyWith(
+          MotelModel value, $Res Function(MotelModel) then) =
+      _$MotelModelCopyWithImpl<$Res, MotelModel>;
+  @useResult
+  $Res call(
+      {String name,
+      String logo,
+      String neighborhood,
+      double distance,
+      int favoritesCount,
+      List<SuiteModel> suites,
+      int reviewsCount,
+      double rating});
+}
+
+/// @nodoc
+class _$MotelModelCopyWithImpl<$Res, $Val extends MotelModel>
+    implements $MotelModelCopyWith<$Res> {
+  _$MotelModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of MotelModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? logo = null,
+    Object? neighborhood = null,
+    Object? distance = null,
+    Object? favoritesCount = null,
+    Object? suites = null,
+    Object? reviewsCount = null,
+    Object? rating = null,
+  }) {
+    return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      logo: null == logo
+          ? _value.logo
+          : logo // ignore: cast_nullable_to_non_nullable
+              as String,
+      neighborhood: null == neighborhood
+          ? _value.neighborhood
+          : neighborhood // ignore: cast_nullable_to_non_nullable
+              as String,
+      distance: null == distance
+          ? _value.distance
+          : distance // ignore: cast_nullable_to_non_nullable
+              as double,
+      favoritesCount: null == favoritesCount
+          ? _value.favoritesCount
+          : favoritesCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      suites: null == suites
+          ? _value.suites
+          : suites // ignore: cast_nullable_to_non_nullable
+              as List<SuiteModel>,
+      reviewsCount: null == reviewsCount
+          ? _value.reviewsCount
+          : reviewsCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      rating: null == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as double,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MotelModelImplCopyWith<$Res>
+    implements $MotelModelCopyWith<$Res> {
+  factory _$$MotelModelImplCopyWith(
+          _$MotelModelImpl value, $Res Function(_$MotelModelImpl) then) =
+      __$$MotelModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String name,
+      String logo,
+      String neighborhood,
+      double distance,
+      int favoritesCount,
+      List<SuiteModel> suites,
+      int reviewsCount,
+      double rating});
+}
+
+/// @nodoc
+class __$$MotelModelImplCopyWithImpl<$Res>
+    extends _$MotelModelCopyWithImpl<$Res, _$MotelModelImpl>
+    implements _$$MotelModelImplCopyWith<$Res> {
+  __$$MotelModelImplCopyWithImpl(
+      _$MotelModelImpl _value, $Res Function(_$MotelModelImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MotelModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? logo = null,
+    Object? neighborhood = null,
+    Object? distance = null,
+    Object? favoritesCount = null,
+    Object? suites = null,
+    Object? reviewsCount = null,
+    Object? rating = null,
+  }) {
+    return _then(_$MotelModelImpl(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      logo: null == logo
+          ? _value.logo
+          : logo // ignore: cast_nullable_to_non_nullable
+              as String,
+      neighborhood: null == neighborhood
+          ? _value.neighborhood
+          : neighborhood // ignore: cast_nullable_to_non_nullable
+              as String,
+      distance: null == distance
+          ? _value.distance
+          : distance // ignore: cast_nullable_to_non_nullable
+              as double,
+      favoritesCount: null == favoritesCount
+          ? _value.favoritesCount
+          : favoritesCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      suites: null == suites
+          ? _value._suites
+          : suites // ignore: cast_nullable_to_non_nullable
+              as List<SuiteModel>,
+      reviewsCount: null == reviewsCount
+          ? _value.reviewsCount
+          : reviewsCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      rating: null == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MotelModelImpl implements _MotelModel {
+  const _$MotelModelImpl(
+      {required this.name,
+      required this.logo,
+      required this.neighborhood,
+      required this.distance,
+      required this.favoritesCount,
+      required final List<SuiteModel> suites,
+      required this.reviewsCount,
+      required this.rating})
+      : _suites = suites;
+
+  factory _$MotelModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MotelModelImplFromJson(json);
+
+  @override
+  final String name;
+  @override
+  final String logo;
+  @override
+  final String neighborhood;
+  @override
+  final double distance;
+  @override
+  final int favoritesCount;
+  final List<SuiteModel> _suites;
+  @override
+  List<SuiteModel> get suites {
+    if (_suites is EqualUnmodifiableListView) return _suites;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_suites);
+  }
+
+  @override
+  final int reviewsCount;
+  @override
+  final double rating;
+
+  @override
+  String toString() {
+    return 'MotelModel(name: $name, logo: $logo, neighborhood: $neighborhood, distance: $distance, favoritesCount: $favoritesCount, suites: $suites, reviewsCount: $reviewsCount, rating: $rating)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MotelModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.logo, logo) || other.logo == logo) &&
+            (identical(other.neighborhood, neighborhood) ||
+                other.neighborhood == neighborhood) &&
+            (identical(other.distance, distance) ||
+                other.distance == distance) &&
+            (identical(other.favoritesCount, favoritesCount) ||
+                other.favoritesCount == favoritesCount) &&
+            const DeepCollectionEquality().equals(other._suites, _suites) &&
+            (identical(other.reviewsCount, reviewsCount) ||
+                other.reviewsCount == reviewsCount) &&
+            (identical(other.rating, rating) || other.rating == rating));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      name,
+      logo,
+      neighborhood,
+      distance,
+      favoritesCount,
+      const DeepCollectionEquality().hash(_suites),
+      reviewsCount,
+      rating);
+
+  /// Create a copy of MotelModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MotelModelImplCopyWith<_$MotelModelImpl> get copyWith =>
+      __$$MotelModelImplCopyWithImpl<_$MotelModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MotelModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MotelModel implements MotelModel {
+  const factory _MotelModel(
+      {required final String name,
+      required final String logo,
+      required final String neighborhood,
+      required final double distance,
+      required final int favoritesCount,
+      required final List<SuiteModel> suites,
+      required final int reviewsCount,
+      required final double rating}) = _$MotelModelImpl;
+
+  factory _MotelModel.fromJson(Map<String, dynamic> json) =
+      _$MotelModelImpl.fromJson;
+
+  @override
+  String get name;
+  @override
+  String get logo;
+  @override
+  String get neighborhood;
+  @override
+  double get distance;
+  @override
+  int get favoritesCount;
+  @override
+  List<SuiteModel> get suites;
+  @override
+  int get reviewsCount;
+  @override
+  double get rating;
+
+  /// Create a copy of MotelModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MotelModelImplCopyWith<_$MotelModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
