@@ -20,6 +20,7 @@ DiscountModel _$DiscountModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DiscountModel {
+  @JsonKey(name: 'desconto')
   double get amount => throw _privateConstructorUsedError;
 
   /// Serializes this DiscountModel to a JSON map.
@@ -38,7 +39,7 @@ abstract class $DiscountModelCopyWith<$Res> {
           DiscountModel value, $Res Function(DiscountModel) then) =
       _$DiscountModelCopyWithImpl<$Res, DiscountModel>;
   @useResult
-  $Res call({double amount});
+  $Res call({@JsonKey(name: 'desconto') double amount});
 }
 
 /// @nodoc
@@ -75,7 +76,7 @@ abstract class _$$DiscountModelImplCopyWith<$Res>
       __$$DiscountModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double amount});
+  $Res call({@JsonKey(name: 'desconto') double amount});
 }
 
 /// @nodoc
@@ -105,12 +106,13 @@ class __$$DiscountModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$DiscountModelImpl implements _DiscountModel {
-  const _$DiscountModelImpl({required this.amount});
+  const _$DiscountModelImpl({@JsonKey(name: 'desconto') required this.amount});
 
   factory _$DiscountModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$DiscountModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'desconto')
   final double amount;
 
   @override
@@ -147,13 +149,15 @@ class _$DiscountModelImpl implements _DiscountModel {
 }
 
 abstract class _DiscountModel implements DiscountModel {
-  const factory _DiscountModel({required final double amount}) =
+  const factory _DiscountModel(
+          {@JsonKey(name: 'desconto') required final double amount}) =
       _$DiscountModelImpl;
 
   factory _DiscountModel.fromJson(Map<String, dynamic> json) =
       _$DiscountModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'desconto')
   double get amount;
 
   /// Create a copy of DiscountModel

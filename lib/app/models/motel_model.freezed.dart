@@ -20,13 +20,21 @@ MotelModel _$MotelModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MotelModel {
+  @JsonKey(name: 'fantasia')
   String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'logo')
   String get logo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bairro')
   String get neighborhood => throw _privateConstructorUsedError;
+  @JsonKey(name: 'distancia')
   double get distance => throw _privateConstructorUsedError;
+  @JsonKey(name: 'qtdFavoritos')
   int get favoritesCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'suites')
   List<SuiteModel> get suites => throw _privateConstructorUsedError;
+  @JsonKey(name: 'qtdAvaliacoes')
   int get reviewsCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'media')
   double get rating => throw _privateConstructorUsedError;
 
   /// Serializes this MotelModel to a JSON map.
@@ -46,14 +54,14 @@ abstract class $MotelModelCopyWith<$Res> {
       _$MotelModelCopyWithImpl<$Res, MotelModel>;
   @useResult
   $Res call(
-      {String name,
-      String logo,
-      String neighborhood,
-      double distance,
-      int favoritesCount,
-      List<SuiteModel> suites,
-      int reviewsCount,
-      double rating});
+      {@JsonKey(name: 'fantasia') String name,
+      @JsonKey(name: 'logo') String logo,
+      @JsonKey(name: 'bairro') String neighborhood,
+      @JsonKey(name: 'distancia') double distance,
+      @JsonKey(name: 'qtdFavoritos') int favoritesCount,
+      @JsonKey(name: 'suites') List<SuiteModel> suites,
+      @JsonKey(name: 'qtdAvaliacoes') int reviewsCount,
+      @JsonKey(name: 'media') double rating});
 }
 
 /// @nodoc
@@ -126,14 +134,14 @@ abstract class _$$MotelModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name,
-      String logo,
-      String neighborhood,
-      double distance,
-      int favoritesCount,
-      List<SuiteModel> suites,
-      int reviewsCount,
-      double rating});
+      {@JsonKey(name: 'fantasia') String name,
+      @JsonKey(name: 'logo') String logo,
+      @JsonKey(name: 'bairro') String neighborhood,
+      @JsonKey(name: 'distancia') double distance,
+      @JsonKey(name: 'qtdFavoritos') int favoritesCount,
+      @JsonKey(name: 'suites') List<SuiteModel> suites,
+      @JsonKey(name: 'qtdAvaliacoes') int reviewsCount,
+      @JsonKey(name: 'media') double rating});
 }
 
 /// @nodoc
@@ -199,31 +207,37 @@ class __$$MotelModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MotelModelImpl implements _MotelModel {
   const _$MotelModelImpl(
-      {required this.name,
-      required this.logo,
-      required this.neighborhood,
-      required this.distance,
-      required this.favoritesCount,
-      required final List<SuiteModel> suites,
-      required this.reviewsCount,
-      required this.rating})
+      {@JsonKey(name: 'fantasia') required this.name,
+      @JsonKey(name: 'logo') required this.logo,
+      @JsonKey(name: 'bairro') required this.neighborhood,
+      @JsonKey(name: 'distancia') required this.distance,
+      @JsonKey(name: 'qtdFavoritos') required this.favoritesCount,
+      @JsonKey(name: 'suites') required final List<SuiteModel> suites,
+      @JsonKey(name: 'qtdAvaliacoes') required this.reviewsCount,
+      @JsonKey(name: 'media') required this.rating})
       : _suites = suites;
 
   factory _$MotelModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$MotelModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'fantasia')
   final String name;
   @override
+  @JsonKey(name: 'logo')
   final String logo;
   @override
+  @JsonKey(name: 'bairro')
   final String neighborhood;
   @override
+  @JsonKey(name: 'distancia')
   final double distance;
   @override
+  @JsonKey(name: 'qtdFavoritos')
   final int favoritesCount;
   final List<SuiteModel> _suites;
   @override
+  @JsonKey(name: 'suites')
   List<SuiteModel> get suites {
     if (_suites is EqualUnmodifiableListView) return _suites;
     // ignore: implicit_dynamic_type
@@ -231,8 +245,10 @@ class _$MotelModelImpl implements _MotelModel {
   }
 
   @override
+  @JsonKey(name: 'qtdAvaliacoes')
   final int reviewsCount;
   @override
+  @JsonKey(name: 'media')
   final double rating;
 
   @override
@@ -290,33 +306,41 @@ class _$MotelModelImpl implements _MotelModel {
 
 abstract class _MotelModel implements MotelModel {
   const factory _MotelModel(
-      {required final String name,
-      required final String logo,
-      required final String neighborhood,
-      required final double distance,
-      required final int favoritesCount,
-      required final List<SuiteModel> suites,
-      required final int reviewsCount,
-      required final double rating}) = _$MotelModelImpl;
+      {@JsonKey(name: 'fantasia') required final String name,
+      @JsonKey(name: 'logo') required final String logo,
+      @JsonKey(name: 'bairro') required final String neighborhood,
+      @JsonKey(name: 'distancia') required final double distance,
+      @JsonKey(name: 'qtdFavoritos') required final int favoritesCount,
+      @JsonKey(name: 'suites') required final List<SuiteModel> suites,
+      @JsonKey(name: 'qtdAvaliacoes') required final int reviewsCount,
+      @JsonKey(name: 'media') required final double rating}) = _$MotelModelImpl;
 
   factory _MotelModel.fromJson(Map<String, dynamic> json) =
       _$MotelModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'fantasia')
   String get name;
   @override
+  @JsonKey(name: 'logo')
   String get logo;
   @override
+  @JsonKey(name: 'bairro')
   String get neighborhood;
   @override
+  @JsonKey(name: 'distancia')
   double get distance;
   @override
+  @JsonKey(name: 'qtdFavoritos')
   int get favoritesCount;
   @override
+  @JsonKey(name: 'suites')
   List<SuiteModel> get suites;
   @override
+  @JsonKey(name: 'qtdAvaliacoes')
   int get reviewsCount;
   @override
+  @JsonKey(name: 'media')
   double get rating;
 
   /// Create a copy of MotelModel

@@ -7,12 +7,12 @@ part 'period_model.g.dart';
 @freezed
 class PeriodModel with _$PeriodModel {
   const factory PeriodModel({
-    required String formattedTime,
-    required String time,
-    required double price,
-    required double totalPrice,
-    required bool hasCourtesy,
-    DiscountModel? discount,
+    @JsonKey(name: 'tempoFormatado') required String formattedTime,
+    @JsonKey(name: 'tempo') required String time,
+    @JsonKey(name: 'valor') required double price,
+    @JsonKey(name: 'valorTotal') required double totalPrice,
+    @JsonKey(name: 'temCortesia') required bool hasCourtesy,
+    @JsonKey(name: 'desconto') DiscountModel? discount,
   }) = _PeriodModel;
 
   factory PeriodModel.fromJson(Map<String, dynamic> json) =>

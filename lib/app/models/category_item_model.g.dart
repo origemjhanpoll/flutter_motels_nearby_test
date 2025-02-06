@@ -9,13 +9,13 @@ part of 'category_item_model.dart';
 _$CategoryItemModelImpl _$$CategoryItemModelImplFromJson(
         Map<String, dynamic> json) =>
     _$CategoryItemModelImpl(
-      name: json['name'] as String,
-      icon: json['icon'] as String,
+      name: json['nome'] as String,
+      icon: json['icone'] as String,
     );
 
 Map<String, dynamic> _$$CategoryItemModelImplToJson(
         _$CategoryItemModelImpl instance) =>
     <String, dynamic>{
-      'name': instance.name,
-      'icon': instance.icon,
+      'nome': instance.name,
+      'icone': instance.icon,
     };

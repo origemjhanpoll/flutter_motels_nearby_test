@@ -8,24 +8,24 @@ part of 'data_model.dart';
 
 _$DataModelImpl _$$DataModelImplFromJson(Map<String, dynamic> json) =>
     _$DataModelImpl(
-      page: (json['page'] as num).toInt(),
-      itemsPerPage: (json['itemsPerPage'] as num).toInt(),
+      page: (json['pagina'] as num).toInt(),
+      itemsPerPage: (json['qtdPorPagina'] as num).toInt(),
       totalSuites: (json['totalSuites'] as num).toInt(),
-      totalMotels: (json['totalMotels'] as num).toInt(),
-      radius: (json['radius'] as num).toDouble(),
-      maxPages: (json['maxPages'] as num).toDouble(),
-      motels: (json['motels'] as List<dynamic>)
+      totalMotels: (json['totalMoteis'] as num).toInt(),
+      radius: (json['raio'] as num).toDouble(),
+      maxPages: (json['maxPaginas'] as num).toDouble(),
+      motels: (json['moteis'] as List<dynamic>)
           .map((e) => MotelModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$$DataModelImplToJson(_$DataModelImpl instance) =>
     <String, dynamic>{
-      'page': instance.page,
-      'itemsPerPage': instance.itemsPerPage,
+      'pagina': instance.page,
+      'qtdPorPagina': instance.itemsPerPage,
       'totalSuites': instance.totalSuites,
-      'totalMotels': instance.totalMotels,
-      'radius': instance.radius,
-      'maxPages': instance.maxPages,
-      'motels': instance.motels,
+      'totalMoteis': instance.totalMotels,
+      'raio': instance.radius,
+      'maxPaginas': instance.maxPages,
+      'moteis': instance.motels,
     };

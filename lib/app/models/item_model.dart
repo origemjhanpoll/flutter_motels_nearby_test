@@ -6,7 +6,7 @@ part 'item_model.g.dart';
 @freezed
 class ItemModel with _$ItemModel {
   const factory ItemModel({
-    required String name,
+    @JsonKey(name: 'nome') required String name,
   }) = _ItemModel;
 
   factory ItemModel.fromJson(Map<String, dynamic> json) =>

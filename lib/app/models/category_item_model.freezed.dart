@@ -20,7 +20,9 @@ CategoryItemModel _$CategoryItemModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CategoryItemModel {
+  @JsonKey(name: 'nome')
   String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'icone')
   String get icon => throw _privateConstructorUsedError;
 
   /// Serializes this CategoryItemModel to a JSON map.
@@ -39,7 +41,9 @@ abstract class $CategoryItemModelCopyWith<$Res> {
           CategoryItemModel value, $Res Function(CategoryItemModel) then) =
       _$CategoryItemModelCopyWithImpl<$Res, CategoryItemModel>;
   @useResult
-  $Res call({String name, String icon});
+  $Res call(
+      {@JsonKey(name: 'nome') String name,
+      @JsonKey(name: 'icone') String icon});
 }
 
 /// @nodoc
@@ -81,7 +85,9 @@ abstract class _$$CategoryItemModelImplCopyWith<$Res>
       __$$CategoryItemModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String icon});
+  $Res call(
+      {@JsonKey(name: 'nome') String name,
+      @JsonKey(name: 'icone') String icon});
 }
 
 /// @nodoc
@@ -116,14 +122,18 @@ class __$$CategoryItemModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CategoryItemModelImpl implements _CategoryItemModel {
-  const _$CategoryItemModelImpl({required this.name, required this.icon});
+  const _$CategoryItemModelImpl(
+      {@JsonKey(name: 'nome') required this.name,
+      @JsonKey(name: 'icone') required this.icon});
 
   factory _$CategoryItemModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CategoryItemModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'nome')
   final String name;
   @override
+  @JsonKey(name: 'icone')
   final String icon;
 
   @override
@@ -163,15 +173,18 @@ class _$CategoryItemModelImpl implements _CategoryItemModel {
 
 abstract class _CategoryItemModel implements CategoryItemModel {
   const factory _CategoryItemModel(
-      {required final String name,
-      required final String icon}) = _$CategoryItemModelImpl;
+          {@JsonKey(name: 'nome') required final String name,
+          @JsonKey(name: 'icone') required final String icon}) =
+      _$CategoryItemModelImpl;
 
   factory _CategoryItemModel.fromJson(Map<String, dynamic> json) =
       _$CategoryItemModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'nome')
   String get name;
   @override
+  @JsonKey(name: 'icone')
   String get icon;
 
   /// Create a copy of CategoryItemModel

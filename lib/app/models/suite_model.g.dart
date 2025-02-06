@@ -8,29 +8,28 @@ part of 'suite_model.dart';
 
 _$SuiteModelImpl _$$SuiteModelImplFromJson(Map<String, dynamic> json) =>
     _$SuiteModelImpl(
-      name: json['name'] as String,
-      quantity: (json['quantity'] as num).toInt(),
-      showAvailableQuantity: json['showAvailableQuantity'] as bool,
-      photos:
-          (json['photos'] as List<dynamic>).map((e) => e as String).toList(),
-      items: (json['items'] as List<dynamic>)
+      name: json['nome'] as String,
+      quantity: (json['qtd'] as num).toInt(),
+      showAvailableQuantity: json['exibirQtdDisponiveis'] as bool,
+      photos: (json['fotos'] as List<dynamic>).map((e) => e as String).toList(),
+      items: (json['itens'] as List<dynamic>)
           .map((e) => ItemModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-      categoryItems: (json['categoryItems'] as List<dynamic>)
+      categoryItems: (json['categoriaItens'] as List<dynamic>)
           .map((e) => CategoryItemModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-      periods: (json['periods'] as List<dynamic>)
+      periods: (json['periodos'] as List<dynamic>)
           .map((e) => PeriodModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$$SuiteModelImplToJson(_$SuiteModelImpl instance) =>
     <String, dynamic>{
-      'name': instance.name,
-      'quantity': instance.quantity,
-      'showAvailableQuantity': instance.showAvailableQuantity,
-      'photos': instance.photos,
-      'items': instance.items,
-      'categoryItems': instance.categoryItems,
-      'periods': instance.periods,
+      'nome': instance.name,
+      'qtd': instance.quantity,
+      'exibirQtdDisponiveis': instance.showAvailableQuantity,
+      'fotos': instance.photos,
+      'itens': instance.items,
+      'categoriaItens': instance.categoryItems,
+      'periodos': instance.periods,
     };

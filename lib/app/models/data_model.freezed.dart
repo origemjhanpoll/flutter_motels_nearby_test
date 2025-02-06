@@ -20,12 +20,19 @@ DataModel _$DataModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DataModel {
+  @JsonKey(name: 'pagina')
   int get page => throw _privateConstructorUsedError;
+  @JsonKey(name: 'qtdPorPagina')
   int get itemsPerPage => throw _privateConstructorUsedError;
+  @JsonKey(name: 'totalSuites')
   int get totalSuites => throw _privateConstructorUsedError;
+  @JsonKey(name: 'totalMoteis')
   int get totalMotels => throw _privateConstructorUsedError;
+  @JsonKey(name: 'raio')
   double get radius => throw _privateConstructorUsedError;
+  @JsonKey(name: 'maxPaginas')
   double get maxPages => throw _privateConstructorUsedError;
+  @JsonKey(name: 'moteis')
   List<MotelModel> get motels => throw _privateConstructorUsedError;
 
   /// Serializes this DataModel to a JSON map.
@@ -44,13 +51,13 @@ abstract class $DataModelCopyWith<$Res> {
       _$DataModelCopyWithImpl<$Res, DataModel>;
   @useResult
   $Res call(
-      {int page,
-      int itemsPerPage,
-      int totalSuites,
-      int totalMotels,
-      double radius,
-      double maxPages,
-      List<MotelModel> motels});
+      {@JsonKey(name: 'pagina') int page,
+      @JsonKey(name: 'qtdPorPagina') int itemsPerPage,
+      @JsonKey(name: 'totalSuites') int totalSuites,
+      @JsonKey(name: 'totalMoteis') int totalMotels,
+      @JsonKey(name: 'raio') double radius,
+      @JsonKey(name: 'maxPaginas') double maxPages,
+      @JsonKey(name: 'moteis') List<MotelModel> motels});
 }
 
 /// @nodoc
@@ -118,13 +125,13 @@ abstract class _$$DataModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int page,
-      int itemsPerPage,
-      int totalSuites,
-      int totalMotels,
-      double radius,
-      double maxPages,
-      List<MotelModel> motels});
+      {@JsonKey(name: 'pagina') int page,
+      @JsonKey(name: 'qtdPorPagina') int itemsPerPage,
+      @JsonKey(name: 'totalSuites') int totalSuites,
+      @JsonKey(name: 'totalMoteis') int totalMotels,
+      @JsonKey(name: 'raio') double radius,
+      @JsonKey(name: 'maxPaginas') double maxPages,
+      @JsonKey(name: 'moteis') List<MotelModel> motels});
 }
 
 /// @nodoc
@@ -185,32 +192,39 @@ class __$$DataModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DataModelImpl implements _DataModel {
   const _$DataModelImpl(
-      {required this.page,
-      required this.itemsPerPage,
-      required this.totalSuites,
-      required this.totalMotels,
-      required this.radius,
-      required this.maxPages,
-      required final List<MotelModel> motels})
+      {@JsonKey(name: 'pagina') required this.page,
+      @JsonKey(name: 'qtdPorPagina') required this.itemsPerPage,
+      @JsonKey(name: 'totalSuites') required this.totalSuites,
+      @JsonKey(name: 'totalMoteis') required this.totalMotels,
+      @JsonKey(name: 'raio') required this.radius,
+      @JsonKey(name: 'maxPaginas') required this.maxPages,
+      @JsonKey(name: 'moteis') required final List<MotelModel> motels})
       : _motels = motels;
 
   factory _$DataModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$DataModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'pagina')
   final int page;
   @override
+  @JsonKey(name: 'qtdPorPagina')
   final int itemsPerPage;
   @override
+  @JsonKey(name: 'totalSuites')
   final int totalSuites;
   @override
+  @JsonKey(name: 'totalMoteis')
   final int totalMotels;
   @override
+  @JsonKey(name: 'raio')
   final double radius;
   @override
+  @JsonKey(name: 'maxPaginas')
   final double maxPages;
   final List<MotelModel> _motels;
   @override
+  @JsonKey(name: 'moteis')
   List<MotelModel> get motels {
     if (_motels is EqualUnmodifiableListView) return _motels;
     // ignore: implicit_dynamic_type
@@ -270,30 +284,38 @@ class _$DataModelImpl implements _DataModel {
 
 abstract class _DataModel implements DataModel {
   const factory _DataModel(
-      {required final int page,
-      required final int itemsPerPage,
-      required final int totalSuites,
-      required final int totalMotels,
-      required final double radius,
-      required final double maxPages,
-      required final List<MotelModel> motels}) = _$DataModelImpl;
+          {@JsonKey(name: 'pagina') required final int page,
+          @JsonKey(name: 'qtdPorPagina') required final int itemsPerPage,
+          @JsonKey(name: 'totalSuites') required final int totalSuites,
+          @JsonKey(name: 'totalMoteis') required final int totalMotels,
+          @JsonKey(name: 'raio') required final double radius,
+          @JsonKey(name: 'maxPaginas') required final double maxPages,
+          @JsonKey(name: 'moteis') required final List<MotelModel> motels}) =
+      _$DataModelImpl;
 
   factory _DataModel.fromJson(Map<String, dynamic> json) =
       _$DataModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'pagina')
   int get page;
   @override
+  @JsonKey(name: 'qtdPorPagina')
   int get itemsPerPage;
   @override
+  @JsonKey(name: 'totalSuites')
   int get totalSuites;
   @override
+  @JsonKey(name: 'totalMoteis')
   int get totalMotels;
   @override
+  @JsonKey(name: 'raio')
   double get radius;
   @override
+  @JsonKey(name: 'maxPaginas')
   double get maxPages;
   @override
+  @JsonKey(name: 'moteis')
   List<MotelModel> get motels;
 
   /// Create a copy of DataModel

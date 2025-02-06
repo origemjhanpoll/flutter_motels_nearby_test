@@ -20,8 +20,11 @@ ResponseModel _$ResponseModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResponseModel {
+  @JsonKey(name: 'sucesso')
   bool get success => throw _privateConstructorUsedError;
+  @JsonKey(name: 'data')
   DataModel get data => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mensagem')
   List<String> get messages => throw _privateConstructorUsedError;
 
   /// Serializes this ResponseModel to a JSON map.
@@ -40,7 +43,10 @@ abstract class $ResponseModelCopyWith<$Res> {
           ResponseModel value, $Res Function(ResponseModel) then) =
       _$ResponseModelCopyWithImpl<$Res, ResponseModel>;
   @useResult
-  $Res call({bool success, DataModel data, List<String> messages});
+  $Res call(
+      {@JsonKey(name: 'sucesso') bool success,
+      @JsonKey(name: 'data') DataModel data,
+      @JsonKey(name: 'mensagem') List<String> messages});
 
   $DataModelCopyWith<$Res> get data;
 }
@@ -99,7 +105,10 @@ abstract class _$$ResponseModelImplCopyWith<$Res>
       __$$ResponseModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool success, DataModel data, List<String> messages});
+  $Res call(
+      {@JsonKey(name: 'sucesso') bool success,
+      @JsonKey(name: 'data') DataModel data,
+      @JsonKey(name: 'mensagem') List<String> messages});
 
   @override
   $DataModelCopyWith<$Res> get data;
@@ -143,20 +152,23 @@ class __$$ResponseModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResponseModelImpl implements _ResponseModel {
   const _$ResponseModelImpl(
-      {required this.success,
-      required this.data,
-      required final List<String> messages})
+      {@JsonKey(name: 'sucesso') required this.success,
+      @JsonKey(name: 'data') required this.data,
+      @JsonKey(name: 'mensagem') required final List<String> messages})
       : _messages = messages;
 
   factory _$ResponseModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResponseModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'sucesso')
   final bool success;
   @override
+  @JsonKey(name: 'data')
   final DataModel data;
   final List<String> _messages;
   @override
+  @JsonKey(name: 'mensagem')
   List<String> get messages {
     if (_messages is EqualUnmodifiableListView) return _messages;
     // ignore: implicit_dynamic_type
@@ -201,18 +213,22 @@ class _$ResponseModelImpl implements _ResponseModel {
 
 abstract class _ResponseModel implements ResponseModel {
   const factory _ResponseModel(
-      {required final bool success,
-      required final DataModel data,
-      required final List<String> messages}) = _$ResponseModelImpl;
+          {@JsonKey(name: 'sucesso') required final bool success,
+          @JsonKey(name: 'data') required final DataModel data,
+          @JsonKey(name: 'mensagem') required final List<String> messages}) =
+      _$ResponseModelImpl;
 
   factory _ResponseModel.fromJson(Map<String, dynamic> json) =
       _$ResponseModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'sucesso')
   bool get success;
   @override
+  @JsonKey(name: 'data')
   DataModel get data;
   @override
+  @JsonKey(name: 'mensagem')
   List<String> get messages;
 
   /// Create a copy of ResponseModel

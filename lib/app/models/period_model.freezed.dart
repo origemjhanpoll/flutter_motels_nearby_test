@@ -20,11 +20,17 @@ PeriodModel _$PeriodModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PeriodModel {
+  @JsonKey(name: 'tempoFormatado')
   String get formattedTime => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tempo')
   String get time => throw _privateConstructorUsedError;
+  @JsonKey(name: 'valor')
   double get price => throw _privateConstructorUsedError;
+  @JsonKey(name: 'valorTotal')
   double get totalPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: 'temCortesia')
   bool get hasCourtesy => throw _privateConstructorUsedError;
+  @JsonKey(name: 'desconto')
   DiscountModel? get discount => throw _privateConstructorUsedError;
 
   /// Serializes this PeriodModel to a JSON map.
@@ -44,12 +50,12 @@ abstract class $PeriodModelCopyWith<$Res> {
       _$PeriodModelCopyWithImpl<$Res, PeriodModel>;
   @useResult
   $Res call(
-      {String formattedTime,
-      String time,
-      double price,
-      double totalPrice,
-      bool hasCourtesy,
-      DiscountModel? discount});
+      {@JsonKey(name: 'tempoFormatado') String formattedTime,
+      @JsonKey(name: 'tempo') String time,
+      @JsonKey(name: 'valor') double price,
+      @JsonKey(name: 'valorTotal') double totalPrice,
+      @JsonKey(name: 'temCortesia') bool hasCourtesy,
+      @JsonKey(name: 'desconto') DiscountModel? discount});
 
   $DiscountModelCopyWith<$Res>? get discount;
 }
@@ -128,12 +134,12 @@ abstract class _$$PeriodModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String formattedTime,
-      String time,
-      double price,
-      double totalPrice,
-      bool hasCourtesy,
-      DiscountModel? discount});
+      {@JsonKey(name: 'tempoFormatado') String formattedTime,
+      @JsonKey(name: 'tempo') String time,
+      @JsonKey(name: 'valor') double price,
+      @JsonKey(name: 'valorTotal') double totalPrice,
+      @JsonKey(name: 'temCortesia') bool hasCourtesy,
+      @JsonKey(name: 'desconto') DiscountModel? discount});
 
   @override
   $DiscountModelCopyWith<$Res>? get discount;
@@ -192,27 +198,33 @@ class __$$PeriodModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PeriodModelImpl implements _PeriodModel {
   const _$PeriodModelImpl(
-      {required this.formattedTime,
-      required this.time,
-      required this.price,
-      required this.totalPrice,
-      required this.hasCourtesy,
-      this.discount});
+      {@JsonKey(name: 'tempoFormatado') required this.formattedTime,
+      @JsonKey(name: 'tempo') required this.time,
+      @JsonKey(name: 'valor') required this.price,
+      @JsonKey(name: 'valorTotal') required this.totalPrice,
+      @JsonKey(name: 'temCortesia') required this.hasCourtesy,
+      @JsonKey(name: 'desconto') this.discount});
 
   factory _$PeriodModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$PeriodModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'tempoFormatado')
   final String formattedTime;
   @override
+  @JsonKey(name: 'tempo')
   final String time;
   @override
+  @JsonKey(name: 'valor')
   final double price;
   @override
+  @JsonKey(name: 'valorTotal')
   final double totalPrice;
   @override
+  @JsonKey(name: 'temCortesia')
   final bool hasCourtesy;
   @override
+  @JsonKey(name: 'desconto')
   final DiscountModel? discount;
 
   @override
@@ -260,27 +272,34 @@ class _$PeriodModelImpl implements _PeriodModel {
 
 abstract class _PeriodModel implements PeriodModel {
   const factory _PeriodModel(
-      {required final String formattedTime,
-      required final String time,
-      required final double price,
-      required final double totalPrice,
-      required final bool hasCourtesy,
-      final DiscountModel? discount}) = _$PeriodModelImpl;
+          {@JsonKey(name: 'tempoFormatado') required final String formattedTime,
+          @JsonKey(name: 'tempo') required final String time,
+          @JsonKey(name: 'valor') required final double price,
+          @JsonKey(name: 'valorTotal') required final double totalPrice,
+          @JsonKey(name: 'temCortesia') required final bool hasCourtesy,
+          @JsonKey(name: 'desconto') final DiscountModel? discount}) =
+      _$PeriodModelImpl;
 
   factory _PeriodModel.fromJson(Map<String, dynamic> json) =
       _$PeriodModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'tempoFormatado')
   String get formattedTime;
   @override
+  @JsonKey(name: 'tempo')
   String get time;
   @override
+  @JsonKey(name: 'valor')
   double get price;
   @override
+  @JsonKey(name: 'valorTotal')
   double get totalPrice;
   @override
+  @JsonKey(name: 'temCortesia')
   bool get hasCourtesy;
   @override
+  @JsonKey(name: 'desconto')
   DiscountModel? get discount;
 
   /// Create a copy of PeriodModel

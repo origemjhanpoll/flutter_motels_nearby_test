@@ -8,10 +8,10 @@ part of 'item_model.dart';
 
 _$ItemModelImpl _$$ItemModelImplFromJson(Map<String, dynamic> json) =>
     _$ItemModelImpl(
-      name: json['name'] as String,
+      name: json['nome'] as String,
     );
 
 Map<String, dynamic> _$$ItemModelImplToJson(_$ItemModelImpl instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'nome': instance.name,
     };

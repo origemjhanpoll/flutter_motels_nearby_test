@@ -7,14 +7,14 @@ part 'motel_model.g.dart';
 @freezed
 class MotelModel with _$MotelModel {
   const factory MotelModel({
-    required String name,
-    required String logo,
-    required String neighborhood,
-    required double distance,
-    required int favoritesCount,
-    required List<SuiteModel> suites,
-    required int reviewsCount,
-    required double rating,
+    @JsonKey(name: 'fantasia') required String name,
+    @JsonKey(name: 'logo') required String logo,
+    @JsonKey(name: 'bairro') required String neighborhood,
+    @JsonKey(name: 'distancia') required double distance,
+    @JsonKey(name: 'qtdFavoritos') required int favoritesCount,
+    @JsonKey(name: 'suites') required List<SuiteModel> suites,
+    @JsonKey(name: 'qtdAvaliacoes') required int reviewsCount,
+    @JsonKey(name: 'media') required double rating,
   }) = _MotelModel;
 
   factory MotelModel.fromJson(Map<String, dynamic> json) =>

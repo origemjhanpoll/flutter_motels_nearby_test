@@ -8,15 +8,15 @@ part of 'response_model.dart';
 
 _$ResponseModelImpl _$$ResponseModelImplFromJson(Map<String, dynamic> json) =>
     _$ResponseModelImpl(
-      success: json['success'] as bool,
+      success: json['sucesso'] as bool,
       data: DataModel.fromJson(json['data'] as Map<String, dynamic>),
       messages:
-          (json['messages'] as List<dynamic>).map((e) => e as String).toList(),
+          (json['mensagem'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$$ResponseModelImplToJson(_$ResponseModelImpl instance) =>
     <String, dynamic>{
-      'success': instance.success,
+      'sucesso': instance.success,
       'data': instance.data,
-      'messages': instance.messages,
+      'mensagem': instance.messages,
     };

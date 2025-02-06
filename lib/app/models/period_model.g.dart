@@ -8,22 +8,22 @@ part of 'period_model.dart';
 
 _$PeriodModelImpl _$$PeriodModelImplFromJson(Map<String, dynamic> json) =>
     _$PeriodModelImpl(
-      formattedTime: json['formattedTime'] as String,
-      time: json['time'] as String,
-      price: (json['price'] as num).toDouble(),
-      totalPrice: (json['totalPrice'] as num).toDouble(),
-      hasCourtesy: json['hasCourtesy'] as bool,
-      discount: json['discount'] == null
+      formattedTime: json['tempoFormatado'] as String,
+      time: json['tempo'] as String,
+      price: (json['valor'] as num).toDouble(),
+      totalPrice: (json['valorTotal'] as num).toDouble(),
+      hasCourtesy: json['temCortesia'] as bool,
+      discount: json['desconto'] == null
           ? null
-          : DiscountModel.fromJson(json['discount'] as Map<String, dynamic>),
+          : DiscountModel.fromJson(json['desconto'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$PeriodModelImplToJson(_$PeriodModelImpl instance) =>
     <String, dynamic>{
-      'formattedTime': instance.formattedTime,
-      'time': instance.time,
-      'price': instance.price,
-      'totalPrice': instance.totalPrice,
-      'hasCourtesy': instance.hasCourtesy,
-      'discount': instance.discount,
+      'tempoFormatado': instance.formattedTime,
+      'tempo': instance.time,
+      'valor': instance.price,
+      'valorTotal': instance.totalPrice,
+      'temCortesia': instance.hasCourtesy,
+      'desconto': instance.discount,
     };

@@ -9,13 +9,14 @@ part 'suite_model.g.dart';
 @freezed
 class SuiteModel with _$SuiteModel {
   const factory SuiteModel({
-    required String name,
-    required int quantity,
-    required bool showAvailableQuantity,
-    required List<String> photos,
-    required List<ItemModel> items,
+    @JsonKey(name: 'nome') required String name,
+    @JsonKey(name: 'qtd') required int quantity,
+    @JsonKey(name: 'exibirQtdDisponiveis') required bool showAvailableQuantity,
+    @JsonKey(name: 'fotos') required List<String> photos,
+    @JsonKey(name: 'itens') required List<ItemModel> items,
+    @JsonKey(name: 'categoriaItens')
     required List<CategoryItemModel> categoryItems,
-    required List<PeriodModel> periods,
+    @JsonKey(name: 'periodos') required List<PeriodModel> periods,
   }) = _SuiteModel;
 
   factory SuiteModel.fromJson(Map<String, dynamic> json) =>

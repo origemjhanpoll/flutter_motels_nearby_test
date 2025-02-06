@@ -20,6 +20,7 @@ ItemModel _$ItemModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ItemModel {
+  @JsonKey(name: 'nome')
   String get name => throw _privateConstructorUsedError;
 
   /// Serializes this ItemModel to a JSON map.
@@ -37,7 +38,7 @@ abstract class $ItemModelCopyWith<$Res> {
   factory $ItemModelCopyWith(ItemModel value, $Res Function(ItemModel) then) =
       _$ItemModelCopyWithImpl<$Res, ItemModel>;
   @useResult
-  $Res call({String name});
+  $Res call({@JsonKey(name: 'nome') String name});
 }
 
 /// @nodoc
@@ -74,7 +75,7 @@ abstract class _$$ItemModelImplCopyWith<$Res>
       __$$ItemModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name});
+  $Res call({@JsonKey(name: 'nome') String name});
 }
 
 /// @nodoc
@@ -104,12 +105,13 @@ class __$$ItemModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ItemModelImpl implements _ItemModel {
-  const _$ItemModelImpl({required this.name});
+  const _$ItemModelImpl({@JsonKey(name: 'nome') required this.name});
 
   factory _$ItemModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ItemModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'nome')
   final String name;
 
   @override
@@ -146,12 +148,14 @@ class _$ItemModelImpl implements _ItemModel {
 }
 
 abstract class _ItemModel implements ItemModel {
-  const factory _ItemModel({required final String name}) = _$ItemModelImpl;
+  const factory _ItemModel(
+      {@JsonKey(name: 'nome') required final String name}) = _$ItemModelImpl;
 
   factory _ItemModel.fromJson(Map<String, dynamic> json) =
       _$ItemModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'nome')
   String get name;
 
   /// Create a copy of ItemModel

@@ -20,13 +20,20 @@ SuiteModel _$SuiteModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SuiteModel {
+  @JsonKey(name: 'nome')
   String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'qtd')
   int get quantity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'exibirQtdDisponiveis')
   bool get showAvailableQuantity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fotos')
   List<String> get photos => throw _privateConstructorUsedError;
+  @JsonKey(name: 'itens')
   List<ItemModel> get items => throw _privateConstructorUsedError;
+  @JsonKey(name: 'categoriaItens')
   List<CategoryItemModel> get categoryItems =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'periodos')
   List<PeriodModel> get periods => throw _privateConstructorUsedError;
 
   /// Serializes this SuiteModel to a JSON map.
@@ -46,13 +53,13 @@ abstract class $SuiteModelCopyWith<$Res> {
       _$SuiteModelCopyWithImpl<$Res, SuiteModel>;
   @useResult
   $Res call(
-      {String name,
-      int quantity,
-      bool showAvailableQuantity,
-      List<String> photos,
-      List<ItemModel> items,
-      List<CategoryItemModel> categoryItems,
-      List<PeriodModel> periods});
+      {@JsonKey(name: 'nome') String name,
+      @JsonKey(name: 'qtd') int quantity,
+      @JsonKey(name: 'exibirQtdDisponiveis') bool showAvailableQuantity,
+      @JsonKey(name: 'fotos') List<String> photos,
+      @JsonKey(name: 'itens') List<ItemModel> items,
+      @JsonKey(name: 'categoriaItens') List<CategoryItemModel> categoryItems,
+      @JsonKey(name: 'periodos') List<PeriodModel> periods});
 }
 
 /// @nodoc
@@ -120,13 +127,13 @@ abstract class _$$SuiteModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name,
-      int quantity,
-      bool showAvailableQuantity,
-      List<String> photos,
-      List<ItemModel> items,
-      List<CategoryItemModel> categoryItems,
-      List<PeriodModel> periods});
+      {@JsonKey(name: 'nome') String name,
+      @JsonKey(name: 'qtd') int quantity,
+      @JsonKey(name: 'exibirQtdDisponiveis') bool showAvailableQuantity,
+      @JsonKey(name: 'fotos') List<String> photos,
+      @JsonKey(name: 'itens') List<ItemModel> items,
+      @JsonKey(name: 'categoriaItens') List<CategoryItemModel> categoryItems,
+      @JsonKey(name: 'periodos') List<PeriodModel> periods});
 }
 
 /// @nodoc
@@ -187,13 +194,15 @@ class __$$SuiteModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SuiteModelImpl implements _SuiteModel {
   const _$SuiteModelImpl(
-      {required this.name,
-      required this.quantity,
+      {@JsonKey(name: 'nome') required this.name,
+      @JsonKey(name: 'qtd') required this.quantity,
+      @JsonKey(name: 'exibirQtdDisponiveis')
       required this.showAvailableQuantity,
-      required final List<String> photos,
-      required final List<ItemModel> items,
+      @JsonKey(name: 'fotos') required final List<String> photos,
+      @JsonKey(name: 'itens') required final List<ItemModel> items,
+      @JsonKey(name: 'categoriaItens')
       required final List<CategoryItemModel> categoryItems,
-      required final List<PeriodModel> periods})
+      @JsonKey(name: 'periodos') required final List<PeriodModel> periods})
       : _photos = photos,
         _items = items,
         _categoryItems = categoryItems,
@@ -203,13 +212,17 @@ class _$SuiteModelImpl implements _SuiteModel {
       _$$SuiteModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'nome')
   final String name;
   @override
+  @JsonKey(name: 'qtd')
   final int quantity;
   @override
+  @JsonKey(name: 'exibirQtdDisponiveis')
   final bool showAvailableQuantity;
   final List<String> _photos;
   @override
+  @JsonKey(name: 'fotos')
   List<String> get photos {
     if (_photos is EqualUnmodifiableListView) return _photos;
     // ignore: implicit_dynamic_type
@@ -218,6 +231,7 @@ class _$SuiteModelImpl implements _SuiteModel {
 
   final List<ItemModel> _items;
   @override
+  @JsonKey(name: 'itens')
   List<ItemModel> get items {
     if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
@@ -226,6 +240,7 @@ class _$SuiteModelImpl implements _SuiteModel {
 
   final List<CategoryItemModel> _categoryItems;
   @override
+  @JsonKey(name: 'categoriaItens')
   List<CategoryItemModel> get categoryItems {
     if (_categoryItems is EqualUnmodifiableListView) return _categoryItems;
     // ignore: implicit_dynamic_type
@@ -234,6 +249,7 @@ class _$SuiteModelImpl implements _SuiteModel {
 
   final List<PeriodModel> _periods;
   @override
+  @JsonKey(name: 'periodos')
   List<PeriodModel> get periods {
     if (_periods is EqualUnmodifiableListView) return _periods;
     // ignore: implicit_dynamic_type
@@ -292,30 +308,40 @@ class _$SuiteModelImpl implements _SuiteModel {
 
 abstract class _SuiteModel implements SuiteModel {
   const factory _SuiteModel(
-      {required final String name,
-      required final int quantity,
+      {@JsonKey(name: 'nome') required final String name,
+      @JsonKey(name: 'qtd') required final int quantity,
+      @JsonKey(name: 'exibirQtdDisponiveis')
       required final bool showAvailableQuantity,
-      required final List<String> photos,
-      required final List<ItemModel> items,
+      @JsonKey(name: 'fotos') required final List<String> photos,
+      @JsonKey(name: 'itens') required final List<ItemModel> items,
+      @JsonKey(name: 'categoriaItens')
       required final List<CategoryItemModel> categoryItems,
+      @JsonKey(name: 'periodos')
       required final List<PeriodModel> periods}) = _$SuiteModelImpl;
 
   factory _SuiteModel.fromJson(Map<String, dynamic> json) =
       _$SuiteModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'nome')
   String get name;
   @override
+  @JsonKey(name: 'qtd')
   int get quantity;
   @override
+  @JsonKey(name: 'exibirQtdDisponiveis')
   bool get showAvailableQuantity;
   @override
+  @JsonKey(name: 'fotos')
   List<String> get photos;
   @override
+  @JsonKey(name: 'itens')
   List<ItemModel> get items;
   @override
+  @JsonKey(name: 'categoriaItens')
   List<CategoryItemModel> get categoryItems;
   @override
+  @JsonKey(name: 'periodos')
   List<PeriodModel> get periods;
 
   /// Create a copy of SuiteModel

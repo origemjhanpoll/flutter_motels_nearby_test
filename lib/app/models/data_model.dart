@@ -7,13 +7,13 @@ part 'data_model.g.dart';
 @freezed
 class DataModel with _$DataModel {
   const factory DataModel({
-    required int page,
-    required int itemsPerPage,
-    required int totalSuites,
-    required int totalMotels,
-    required double radius,
-    required double maxPages,
-    required List<MotelModel> motels,
+    @JsonKey(name: 'pagina') required int page,
+    @JsonKey(name: 'qtdPorPagina') required int itemsPerPage,
+    @JsonKey(name: 'totalSuites') required int totalSuites,
+    @JsonKey(name: 'totalMoteis') required int totalMotels,
+    @JsonKey(name: 'raio') required double radius,
+    @JsonKey(name: 'maxPaginas') required double maxPages,
+    @JsonKey(name: 'moteis') required List<MotelModel> motels,
   }) = _DataModel;
 
   factory DataModel.fromJson(Map<String, dynamic> json) =>
