@@ -4,8 +4,8 @@ class ThemeCustom {
   static final theme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(
-      primary: Colors.red,
-      seedColor: Colors.red,
+      primary: Color(0xFFD11521),
+      seedColor: Color(0xFFD11521),
     ),
     cardTheme: CardThemeData(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.0)),
