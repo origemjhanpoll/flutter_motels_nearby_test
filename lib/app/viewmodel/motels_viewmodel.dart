@@ -21,7 +21,7 @@ class MotelsViewModel extends Bloc<MotelsEvent, MotelsState> {
       if (motels.isEmpty) {
         emit(MotelsEmpty());
       } else {
-        emit(MotelsLoaded([...motels, ...motels, ...motels, ...motels]));
+        emit(MotelsLoaded(motels));
       }
     } catch (e) {
       emit(MotelsError("Erro ao buscar motéis: $e"));
