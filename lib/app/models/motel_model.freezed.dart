@@ -205,7 +205,7 @@ class __$$MotelModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MotelModelImpl implements _MotelModel {
+class _$MotelModelImpl extends _MotelModel {
   const _$MotelModelImpl(
       {@JsonKey(name: 'fantasia') required this.name,
       @JsonKey(name: 'logo') required this.logo,
@@ -215,7 +215,8 @@ class _$MotelModelImpl implements _MotelModel {
       @JsonKey(name: 'suites') required final List<SuiteModel> suites,
       @JsonKey(name: 'qtdAvaliacoes') required this.reviewsCount,
       @JsonKey(name: 'media') required this.rating})
-      : _suites = suites;
+      : _suites = suites,
+        super._();
 
   factory _$MotelModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$MotelModelImplFromJson(json);
@@ -304,7 +305,7 @@ class _$MotelModelImpl implements _MotelModel {
   }
 }
 
-abstract class _MotelModel implements MotelModel {
+abstract class _MotelModel extends MotelModel {
   const factory _MotelModel(
       {@JsonKey(name: 'fantasia') required final String name,
       @JsonKey(name: 'logo') required final String logo,
@@ -314,6 +315,7 @@ abstract class _MotelModel implements MotelModel {
       @JsonKey(name: 'suites') required final List<SuiteModel> suites,
       @JsonKey(name: 'qtdAvaliacoes') required final int reviewsCount,
       @JsonKey(name: 'media') required final double rating}) = _$MotelModelImpl;
+  const _MotelModel._() : super._();
 
   factory _MotelModel.fromJson(Map<String, dynamic> json) =
       _$MotelModelImpl.fromJson;

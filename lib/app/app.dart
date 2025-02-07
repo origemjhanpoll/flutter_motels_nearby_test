@@ -9,6 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Motels Nearby',
+      debugShowCheckedModeBanner: false,
       theme: ThemeCustom.theme,
       home: const MotelsListPage(),
     );

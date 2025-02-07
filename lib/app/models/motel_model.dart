@@ -6,6 +6,8 @@ part 'motel_model.g.dart';
 
 @freezed
 class MotelModel with _$MotelModel {
+  const MotelModel._();
+
   const factory MotelModel({
     @JsonKey(name: 'fantasia') required String name,
     @JsonKey(name: 'logo') required String logo,
@@ -19,4 +21,11 @@ class MotelModel with _$MotelModel {
 
   factory MotelModel.fromJson(Map<String, dynamic> json) =>
       _$MotelModelFromJson(json);
+
+  List<String> get firstPhotos {
+    return suites
+        .map((suite) => suite.photos.isNotEmpty ? suite.photos.first : null)
+        .whereType<String>()
+        .toList();
+  }
 }

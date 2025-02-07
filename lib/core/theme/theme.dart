@@ -4,13 +4,11 @@ class ThemeCustom {
   static final theme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(
-      primary: Color(0xFF191F29),
-      seedColor: Color(0xFF191F29),
-      surface: Color(0xFFF0F3F4),
+      primary: Colors.red,
+      seedColor: Colors.red,
     ),
     cardTheme: CardThemeData(
-      elevation: 0.0,
-      shape: LinearBorder(),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.0)),
       color: Colors.white,
     ),
     filledButtonTheme: FilledButtonThemeData(

@@ -13,28 +13,28 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       forceMaterialTransparency: true,
-      title: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Localização',
-            style: theme.textTheme.labelSmall!.copyWith(color: theme.hintColor),
+      backgroundColor: theme.primaryColor,
+      title: ListTile(
+        leading: Icon(
+          Icons.location_on_rounded,
+          color: theme.colorScheme.onPrimary,
+        ),
+        contentPadding: EdgeInsets.zero,
+        title: Text(
+          'Localização',
+          style: theme.textTheme.labelMedium!.copyWith(
+            color: Colors.white70,
           ),
-          Row(
-            spacing: PaddingSize.small * 0.5,
-            children: [
-              Icon(Icons.location_on_rounded),
-              Text(
-                'São Paulo - SP',
-                style: theme.textTheme.bodyMedium!
-                    .copyWith(fontWeight: FontWeight.bold),
-              ),
-            ],
-          )
-        ],
+        ),
+        subtitle: Text(
+          'São Paulo - SP',
+          style: theme.textTheme.bodyMedium!.copyWith(
+              color: theme.colorScheme.onPrimary, fontWeight: FontWeight.bold),
+        ),
       ),
       actions: [
         IconButton(
+          color: theme.colorScheme.onPrimary,
           onPressed: () => goNewPage(title: 'Notificações', context: context),
           icon: Icon(Icons.notifications_none),
         )
