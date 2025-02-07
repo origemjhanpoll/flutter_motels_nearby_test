@@ -5,7 +5,12 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class GalleryWidget extends StatefulWidget {
   final List<String> gallery;
-  const GalleryWidget({super.key, required this.gallery});
+  final ValueChanged<int>? onGalleryChanged;
+  const GalleryWidget({
+    super.key,
+    required this.gallery,
+    this.onGalleryChanged,
+  });
 
   @override
   State<GalleryWidget> createState() => _GalleryWidgetState();
@@ -29,12 +34,10 @@ class _GalleryWidgetState extends State<GalleryWidget> {
 
   @override
   Widget build(BuildContext context) {
-    // final theme = Theme.of(context);
-
     return ClipRRect(
       borderRadius: BorderRadius.circular(24.0),
       child: SizedBox.fromSize(
-        size: const Size.fromHeight(220),
+        size: const Size.fromHeight(200),
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
@@ -42,6 +45,7 @@ class _GalleryWidgetState extends State<GalleryWidget> {
               controller: _pageController,
               itemCount: widget.gallery.length,
               onPageChanged: (index) {
+                widget.onGalleryChanged?.call(index);
                 setState(() {
                   _currentIndex = index;
                 });

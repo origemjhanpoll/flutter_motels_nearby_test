@@ -192,7 +192,7 @@ class __$$SuiteModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SuiteModelImpl implements _SuiteModel {
+class _$SuiteModelImpl extends _SuiteModel {
   const _$SuiteModelImpl(
       {@JsonKey(name: 'nome') required this.name,
       @JsonKey(name: 'qtd') required this.quantity,
@@ -206,7 +206,8 @@ class _$SuiteModelImpl implements _SuiteModel {
       : _photos = photos,
         _items = items,
         _categoryItems = categoryItems,
-        _periods = periods;
+        _periods = periods,
+        super._();
 
   factory _$SuiteModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$SuiteModelImplFromJson(json);
@@ -306,7 +307,7 @@ class _$SuiteModelImpl implements _SuiteModel {
   }
 }
 
-abstract class _SuiteModel implements SuiteModel {
+abstract class _SuiteModel extends SuiteModel {
   const factory _SuiteModel(
       {@JsonKey(name: 'nome') required final String name,
       @JsonKey(name: 'qtd') required final int quantity,
@@ -318,6 +319,7 @@ abstract class _SuiteModel implements SuiteModel {
       required final List<CategoryItemModel> categoryItems,
       @JsonKey(name: 'periodos')
       required final List<PeriodModel> periods}) = _$SuiteModelImpl;
+  const _SuiteModel._() : super._();
 
   factory _SuiteModel.fromJson(Map<String, dynamic> json) =
       _$SuiteModelImpl.fromJson;
