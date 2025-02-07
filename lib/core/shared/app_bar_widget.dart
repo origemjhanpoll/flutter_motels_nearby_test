@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_motels_nearby_test/core/constants/padding_size.dart';
 import 'package:flutter_motels_nearby_test/core/utils/go_next_page.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
