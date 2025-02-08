@@ -16,8 +16,5 @@ class ThemeCustom {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24.0),
         )),
-    filledButtonTheme: FilledButtonThemeData(
-      style: ButtonStyle(shape: WidgetStatePropertyAll(LinearBorder())),
-    ),
   );
 }

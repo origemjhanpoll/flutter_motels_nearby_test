@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_motels_nearby_test/app/viewmodel/motels_viewmodel.dart';
-import 'package:flutter_motels_nearby_test/app/views/motel_details_page.dart';
+import 'package:flutter_motels_nearby_test/app/views/suite_detail_page.dart';
 import 'package:flutter_motels_nearby_test/app/views/widgets/motel_card_widget.dart';
 import 'package:flutter_motels_nearby_test/core/constants/padding_size.dart';
 import 'package:flutter_motels_nearby_test/core/shared/app_bar_widget.dart';
