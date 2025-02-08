@@ -151,8 +151,16 @@ class _SuiteCardState extends State<_SuiteCard> {
                       endIndent: PaddingSize.medium,
                       color: Colors.white38),
                 ),
-                Text(
-                  'melhor oferta',
+                Text.rich(
+                  TextSpan(
+                      children:
+                          List.generate(widget.suite.periods.length, (index) {
+                    final period = widget.suite.periods[index];
+                    return TextSpan(text: '${period.time}h', children: [
+                      if (period != widget.suite.periods.last)
+                        TextSpan(text: ' • ')
+                    ]);
+                  })),
                   style: theme.textTheme.bodySmall!
                       .copyWith(color: Colors.white70),
                 ),
