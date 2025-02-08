@@ -16,7 +16,7 @@
                 "qtdFavoritos": 0,
                 "suites": [
                     {
-                        "nome": "Suíte Marselha s/ garagem privativa",
+                        "nome": "Suíte Sedução",
                         "qtd": 1,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -117,7 +117,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Marselha Sexy",
+                        "nome": "Suíte Paraíso",
                         "qtd": 1,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -242,7 +242,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Nantes s/ garagem privativa",
+                        "nome": "Suíte Magia",
                         "qtd": 2,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -351,7 +351,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Versalhes",
+                        "nome": "Suíte Sensação",
                         "qtd": 6,
                         "exibirQtdDisponiveis": false,
                         "fotos": [
@@ -457,7 +457,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Cannes",
+                        "nome": "Suíte Encanto",
                         "qtd": 7,
                         "exibirQtdDisponiveis": false,
                         "fotos": [
@@ -585,7 +585,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Nice",
+                        "nome": "Suíte Delírio",
                         "qtd": 1,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -709,7 +709,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Le Sex",
+                        "nome": "Suíte Euforia",
                         "qtd": 2,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -842,7 +842,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Paris",
+                        "nome": "Suíte Sonho",
                         "qtd": 1,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -956,7 +956,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Le Nid",
+                        "nome": "Suíte Paixão",
                         "qtd": 1,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -1092,7 +1092,7 @@
                 "qtdFavoritos": 29,
                 "suites": [
                     {
-                        "nome": "Suíte Sensação",
+                        "nome": "Suíte Paixão",
                         "qtd": 1,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -1110,25 +1110,25 @@
                                 "desconto": null
                             },
                             {
-                                "tempoFormatado": "12 horas",
-                                "tempo": "12",
-                                "valor": 237.65,
-                                "valorTotal": 237.65,
-                                "temCortesia": false,
-                                "desconto": null
-                            },
-                            {
                                 "tempoFormatado": "6 horas",
                                 "tempo": "6",
                                 "valor": 310.92,
                                 "valorTotal": 310.92,
                                 "temCortesia": false,
                                 "desconto": null
+                            },
+                            {
+                                "tempoFormatado": "12 horas",
+                                "tempo": "12",
+                                "valor": 237.65,
+                                "valorTotal": 237.65,
+                                "temCortesia": false,
+                                "desconto": null
                             }
                         ]
                     },
                     {
-                        "nome": "Suíte Sensação",
+                        "nome": "Suíte Vênus",
                         "qtd": 5,
                         "exibirQtdDisponiveis": false,
                         "fotos": [
@@ -1159,7 +1159,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Euforia",
+                        "nome": "Suíte Sonho",
                         "qtd": 2,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -1173,18 +1173,18 @@
                         ],
                         "periodos": [
                             {
-                                "tempoFormatado": "6 horas",
-                                "tempo": "6",
-                                "valor": 196.04,
-                                "valorTotal": 196.04,
-                                "temCortesia": false,
-                                "desconto": null
-                            },
-                            {
                                 "tempoFormatado": "2 horas",
                                 "tempo": "2",
                                 "valor": 413.91,
                                 "valorTotal": 413.91,
+                                "temCortesia": false,
+                                "desconto": null
+                            },
+                            {
+                                "tempoFormatado": "6 horas",
+                                "tempo": "6",
+                                "valor": 196.04,
+                                "valorTotal": 196.04,
                                 "temCortesia": false,
                                 "desconto": null
                             },
@@ -1199,7 +1199,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Romance",
+                        "nome": "Suíte Fantasia",
                         "qtd": 5,
                         "exibirQtdDisponiveis": false,
                         "fotos": [
@@ -1245,7 +1245,7 @@
                 "qtdFavoritos": 52,
                 "suites": [
                     {
-                        "nome": "Suíte Luxo",
+                        "nome": "Suíte Fantasia",
                         "qtd": 3,
                         "exibirQtdDisponiveis": false,
                         "fotos": [
@@ -1257,10 +1257,10 @@
                         ],
                         "periodos": [
                             {
-                                "tempoFormatado": "12 horas",
-                                "tempo": "12",
-                                "valor": 391.77,
-                                "valorTotal": 391.77,
+                                "tempoFormatado": "2 horas",
+                                "tempo": "2",
+                                "valor": 232.19,
+                                "valorTotal": 232.19,
                                 "temCortesia": false,
                                 "desconto": null
                             },
@@ -1273,10 +1273,10 @@
                                 "desconto": null
                             },
                             {
-                                "tempoFormatado": "2 horas",
-                                "tempo": "2",
-                                "valor": 232.19,
-                                "valorTotal": 232.19,
+                                "tempoFormatado": "12 horas",
+                                "tempo": "12",
+                                "valor": 391.77,
+                                "valorTotal": 391.77,
                                 "temCortesia": false,
                                 "desconto": null
                             }
@@ -1296,25 +1296,25 @@
                         ],
                         "periodos": [
                             {
-                                "tempoFormatado": "4 horas",
-                                "tempo": "4",
-                                "valor": 183.51,
-                                "valorTotal": 183.51,
-                                "temCortesia": false,
-                                "desconto": null
-                            },
-                            {
                                 "tempoFormatado": "3 horas",
                                 "tempo": "3",
                                 "valor": 245.01,
                                 "valorTotal": 245.01,
                                 "temCortesia": false,
                                 "desconto": null
+                            },
+                            {
+                                "tempoFormatado": "4 horas",
+                                "tempo": "4",
+                                "valor": 183.51,
+                                "valorTotal": 183.51,
+                                "temCortesia": false,
+                                "desconto": null
                             }
                         ]
                     },
                     {
-                        "nome": "Suíte Romance",
+                        "nome": "Suíte Sonho",
                         "qtd": 2,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -1323,6 +1323,22 @@
                             "https://cdn.guiademoteis.com.br/imagens/suites/default_1.jpg"
                         ],
                         "periodos": [
+                            {
+                                "tempoFormatado": "3 horas",
+                                "tempo": "3",
+                                "valor": 240.78,
+                                "valorTotal": 240.78,
+                                "temCortesia": false,
+                                "desconto": null
+                            },
+                            {
+                                "tempoFormatado": "4 horas",
+                                "tempo": "4",
+                                "valor": 337.51,
+                                "valorTotal": 337.51,
+                                "temCortesia": false,
+                                "desconto": null
+                            },
                             {
                                 "tempoFormatado": "6 horas",
                                 "tempo": "6",
@@ -1338,27 +1354,11 @@
                                 "valorTotal": 294.48,
                                 "temCortesia": false,
                                 "desconto": null
-                            },
-                            {
-                                "tempoFormatado": "4 horas",
-                                "tempo": "4",
-                                "valor": 337.51,
-                                "valorTotal": 337.51,
-                                "temCortesia": false,
-                                "desconto": null
-                            },
-                            {
-                                "tempoFormatado": "3 horas",
-                                "tempo": "3",
-                                "valor": 240.78,
-                                "valorTotal": 240.78,
-                                "temCortesia": false,
-                                "desconto": null
                             }
                         ]
                     },
                     {
-                        "nome": "Suíte Euforia",
+                        "nome": "Suíte Oásis",
                         "qtd": 3,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -1371,10 +1371,10 @@
                         ],
                         "periodos": [
                             {
-                                "tempoFormatado": "6 horas",
-                                "tempo": "6",
-                                "valor": 158.73,
-                                "valorTotal": 158.73,
+                                "tempoFormatado": "2 horas",
+                                "tempo": "2",
+                                "valor": 232.52,
+                                "valorTotal": 232.52,
                                 "temCortesia": false,
                                 "desconto": null
                             },
@@ -1387,10 +1387,10 @@
                                 "desconto": null
                             },
                             {
-                                "tempoFormatado": "2 horas",
-                                "tempo": "2",
-                                "valor": 232.52,
-                                "valorTotal": 232.52,
+                                "tempoFormatado": "6 horas",
+                                "tempo": "6",
+                                "valor": 158.73,
+                                "valorTotal": 158.73,
                                 "temCortesia": false,
                                 "desconto": null
                             }
@@ -1406,7 +1406,7 @@
                 "qtdFavoritos": 5,
                 "suites": [
                     {
-                        "nome": "Suíte Magia",
+                        "nome": "Suíte Sonho",
                         "qtd": 5,
                         "exibirQtdDisponiveis": false,
                         "fotos": [
@@ -1426,10 +1426,10 @@
                                 "desconto": null
                             },
                             {
-                                "tempoFormatado": "12 horas",
-                                "tempo": "12",
-                                "valor": 320.08,
-                                "valorTotal": 320.08,
+                                "tempoFormatado": "4 horas",
+                                "tempo": "4",
+                                "valor": 438.78,
+                                "valorTotal": 438.78,
                                 "temCortesia": false,
                                 "desconto": null
                             },
@@ -1442,17 +1442,17 @@
                                 "desconto": null
                             },
                             {
-                                "tempoFormatado": "4 horas",
-                                "tempo": "4",
-                                "valor": 438.78,
-                                "valorTotal": 438.78,
+                                "tempoFormatado": "12 horas",
+                                "tempo": "12",
+                                "valor": 320.08,
+                                "valorTotal": 320.08,
                                 "temCortesia": false,
                                 "desconto": null
                             }
                         ]
                     },
                     {
-                        "nome": "Suíte Euforia",
+                        "nome": "Suíte Sensação",
                         "qtd": 4,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -1462,6 +1462,14 @@
                             "https://cdn.guiademoteis.com.br/imagens/suites/default_1.jpg"
                         ],
                         "periodos": [
+                            {
+                                "tempoFormatado": "2 horas",
+                                "tempo": "2",
+                                "valor": 390.1,
+                                "valorTotal": 390.1,
+                                "temCortesia": false,
+                                "desconto": null
+                            },
                             {
                                 "tempoFormatado": "3 horas",
                                 "tempo": "3",
@@ -1485,19 +1493,11 @@
                                 "valorTotal": 166.88,
                                 "temCortesia": false,
                                 "desconto": null
-                            },
-                            {
-                                "tempoFormatado": "2 horas",
-                                "tempo": "2",
-                                "valor": 390.1,
-                                "valorTotal": 390.1,
-                                "temCortesia": false,
-                                "desconto": null
                             }
                         ]
                     },
                     {
-                        "nome": "Suíte Sensação",
+                        "nome": "Suíte Sedução",
                         "qtd": 3,
                         "exibirQtdDisponiveis": false,
                         "fotos": [
@@ -1508,14 +1508,6 @@
                             "https://cdn.guiademoteis.com.br/imagens/suites/default_8.jpg"
                         ],
                         "periodos": [
-                            {
-                                "tempoFormatado": "6 horas",
-                                "tempo": "6",
-                                "valor": 183.67,
-                                "valorTotal": 183.67,
-                                "temCortesia": false,
-                                "desconto": null
-                            },
                             {
                                 "tempoFormatado": "2 horas",
                                 "tempo": "2",
@@ -1531,11 +1523,19 @@
                                 "valorTotal": 418.21,
                                 "temCortesia": false,
                                 "desconto": null
+                            },
+                            {
+                                "tempoFormatado": "6 horas",
+                                "tempo": "6",
+                                "valor": 183.67,
+                                "valorTotal": 183.67,
+                                "temCortesia": false,
+                                "desconto": null
                             }
                         ]
                     },
                     {
-                        "nome": "Suíte Luxo",
+                        "nome": "Suíte Paixão",
                         "qtd": 4,
                         "exibirQtdDisponiveis": true,
                         "fotos": [
@@ -1546,6 +1546,22 @@
                             "https://cdn.guiademoteis.com.br/imagens/suites/default_1.jpg"
                         ],
                         "periodos": [
+                            {
+                                "tempoFormatado": "2 horas",
+                                "tempo": "2",
+                                "valor": 121.04,
+                                "valorTotal": 121.04,
+                                "temCortesia": false,
+                                "desconto": null
+                            },
+                            {
+                                "tempoFormatado": "4 horas",
+                                "tempo": "4",
+                                "valor": 224.63,
+                                "valorTotal": 224.63,
+                                "temCortesia": false,
+                                "desconto": null
+                            },
                             {
                                 "tempoFormatado": "6 horas",
                                 "tempo": "6",
@@ -1559,22 +1575,6 @@
                                 "tempo": "12",
                                 "valor": 207.39,
                                 "valorTotal": 207.39,
-                                "temCortesia": false,
-                                "desconto": null
-                            },
-                            {
-                                "tempoFormatado": "4 horas",
-                                "tempo": "4",
-                                "valor": 224.63,
-                                "valorTotal": 224.63,
-                                "temCortesia": false,
-                                "desconto": null
-                            },
-                            {
-                                "tempoFormatado": "2 horas",
-                                "tempo": "2",
-                                "valor": 121.04,
-                                "valorTotal": 121.04,
                                 "temCortesia": false,
                                 "desconto": null
                             }
@@ -1618,7 +1618,7 @@
                         ]
                     },
                     {
-                        "nome": "Suíte Romance",
+                        "nome": "Suíte Vênus",
                         "qtd": 1,
                         "exibirQtdDisponiveis": false,
                         "fotos": [

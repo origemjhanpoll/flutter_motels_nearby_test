@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_motels_nearby_test/app/models/motel_model.dart';
 import 'package:flutter_motels_nearby_test/app/repositories/motels_repository.dart';
@@ -23,7 +26,10 @@ class MotelsViewModel extends Bloc<MotelsEvent, MotelsState> {
       } else {
         emit(MotelsLoaded(motels));
       }
+    } on HttpException catch (e) {
+      emit(MotelsError(e.message));
     } catch (e) {
+      debugPrint('$e');
       emit(MotelsError("Erro ao buscar motéis: $e"));
     }
   }
