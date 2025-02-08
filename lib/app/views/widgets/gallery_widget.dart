@@ -8,12 +8,14 @@ class GalleryWidget extends StatefulWidget {
   final ValueChanged<int>? onGalleryChanged;
   final Size? size;
   final BorderRadius? borderRadius;
+  final ValueChanged<String>? onTap;
   const GalleryWidget({
     super.key,
     required this.gallery,
     this.onGalleryChanged,
     this.size,
     this.borderRadius,
+    this.onTap,
   });
 
   @override
@@ -57,18 +59,24 @@ class _GalleryWidgetState extends State<GalleryWidget> {
               },
               itemBuilder: (context, index) {
                 final image = widget.gallery[index];
-                return CachedNetworkImage(
-                  progressIndicatorBuilder: (context, url, progress) =>
-                      DecoratedBox(
-                    decoration: BoxDecoration(color: Colors.white),
-                    child: Center(
-                      child: CircularProgressIndicator(
-                        value: progress.progress,
+                return IgnorePointer(
+                  ignoring: widget.onTap == null,
+                  child: GestureDetector(
+                    onTap: () => widget.onTap?.call(image),
+                    child: CachedNetworkImage(
+                      progressIndicatorBuilder: (context, url, progress) =>
+                          DecoratedBox(
+                        decoration: BoxDecoration(color: Colors.white),
+                        child: Center(
+                          child: CircularProgressIndicator(
+                            value: progress.progress,
+                          ),
+                        ),
                       ),
+                      imageUrl: image,
+                      fit: BoxFit.cover,
                     ),
                   ),
-                  imageUrl: image,
-                  fit: BoxFit.cover,
                 );
               },
             ),

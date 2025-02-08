@@ -18,6 +18,7 @@ class SuiteDetailPage extends StatefulWidget {
 }
 
 class _SuiteDetailPageState extends State<SuiteDetailPage> {
+  int _galleryIndex = 0;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -35,6 +36,11 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
               flexibleSpace: Hero(
                 tag: Key(widget.suite.photos.first),
                 child: GalleryWidget(
+                  onGalleryChanged: (value) {
+                    setState(() {
+                      _galleryIndex = value;
+                    });
+                  },
                   borderRadius:
                       BorderRadius.vertical(bottom: Radius.circular(48.0)),
                   size: Size.fromHeight(screen.height * 0.5),
@@ -43,6 +49,38 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
               ),
               automaticallyImplyLeading: false,
               actions: [
+                Padding(
+                  padding: EdgeInsets.only(
+                      right: PaddingSize.small, bottom: PaddingSize.small),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color:
+                            theme.colorScheme.onPrimary.withValues(alpha: 0.5),
+                        width: 2,
+                      ),
+                    ),
+                    child: SizedBox.square(
+                      dimension: 40,
+                      child: ClipOval(
+                        child: BackdropFilter(
+                          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                          child: IconButton(
+                            style: ButtonStyle(
+                                backgroundColor: WidgetStatePropertyAll(
+                                    Colors.black45.withValues(alpha: 0.2))),
+                            color: theme.colorScheme.onPrimary,
+                            icon: Icon(Icons.fit_screen_rounded),
+                            onPressed: () => showImage(
+                                context: context,
+                                image: widget.suite.photos[_galleryIndex]),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: EdgeInsets.only(
                       right: PaddingSize.medium, bottom: PaddingSize.small),
@@ -79,6 +117,7 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
         },
         body: SafeArea(
           top: false,
+          bottom: false,
           child: SingleChildScrollView(
             padding: EdgeInsets.all(PaddingSize.medium),
             child: Column(
@@ -220,5 +259,30 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
         ),
       ),
     );
+  }
+
+  Future<dynamic> showImage(
+      {required BuildContext context, required String image}) {
+    return showDialog(
+        useSafeArea: false,
+        context: context,
+        barrierColor: Colors.black.withValues(alpha: 0.9),
+        builder: (context) {
+          return GestureDetector(
+            onTap: () => Navigator.of(context).pop(),
+            child: CachedNetworkImage(
+              imageUrl: image,
+              progressIndicatorBuilder: (context, url, progress) =>
+                  DecoratedBox(
+                decoration: BoxDecoration(color: Colors.white),
+                child: Center(
+                  child: CircularProgressIndicator(
+                    value: progress.progress,
+                  ),
+                ),
+              ),
+            ),
+          );
+        });
   }
 }

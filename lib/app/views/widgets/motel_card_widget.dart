@@ -3,8 +3,10 @@ import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_motels_nearby_test/app/models/suite_model.dart';
+import 'package:flutter_motels_nearby_test/app/views/suite_detail_page.dart';
 import 'package:flutter_motels_nearby_test/app/views/widgets/gallery_widget.dart';
 import 'package:flutter_motels_nearby_test/core/constants/padding_size.dart';
+import 'package:flutter_motels_nearby_test/core/utils/go_next_page.dart';
 
 class MotelCardWidget extends StatefulWidget {
   final String name;
@@ -14,6 +16,7 @@ class MotelCardWidget extends StatefulWidget {
   final List<String> gallery;
   final double rating;
   final int reviewsCount;
+  final VoidCallback? onTap;
   const MotelCardWidget({
     super.key,
     required this.name,
@@ -23,6 +26,7 @@ class MotelCardWidget extends StatefulWidget {
     required this.gallery,
     required this.rating,
     required this.reviewsCount,
+    this.onTap,
   });
 
   @override
@@ -35,10 +39,8 @@ class _MotelCardWidgetState extends State<MotelCardWidget> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    // final screen = MediaQuery.of(context);
 
     return Stack(
-      fit: StackFit.loose,
       children: [
         Card(
           margin: EdgeInsets.zero,
@@ -47,6 +49,11 @@ class _MotelCardWidgetState extends State<MotelCardWidget> {
             mainAxisSize: MainAxisSize.min,
             children: [
               GalleryWidget(
+                onTap: (value) => goNewPage(
+                    fullscreenDialog: true,
+                    context: context,
+                    child:
+                        SuiteDetailPage(suite: widget.suites[_currentIndex])),
                 gallery: widget.gallery,
                 onGalleryChanged: (index) {
                   setState(() {
@@ -55,6 +62,7 @@ class _MotelCardWidgetState extends State<MotelCardWidget> {
                 },
               ),
               ListTile(
+                onTap: widget.onTap,
                 title: Text(widget.name),
                 titleTextStyle: theme.textTheme.titleMedium!
                     .copyWith(fontWeight: FontWeight.bold),

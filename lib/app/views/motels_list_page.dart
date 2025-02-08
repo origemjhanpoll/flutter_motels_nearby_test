@@ -61,21 +61,19 @@ class _MotelsListPageState extends State<MotelsListPage> {
                         final motel = state.motels[index];
                         return Padding(
                           padding: EdgeInsets.only(bottom: PaddingSize.medium),
-                          child: GestureDetector(
+                          child: MotelCardWidget(
                             onTap: () => goNewPage(
                               context: context,
                               child: SuitesListPage(
                                   title: motel.name, suites: motel.suites),
                             ),
-                            child: MotelCardWidget(
-                              name: motel.name,
-                              neighborhood: motel.neighborhood,
-                              logo: motel.logo,
-                              suites: motel.suites,
-                              gallery: motel.firstPhotos,
-                              rating: motel.rating,
-                              reviewsCount: motel.reviewsCount,
-                            ),
+                            name: motel.name,
+                            neighborhood: motel.neighborhood,
+                            logo: motel.logo,
+                            suites: motel.suites,
+                            gallery: motel.firstPhotos,
+                            rating: motel.rating,
+                            reviewsCount: motel.reviewsCount,
                           ),
                         );
                       },
