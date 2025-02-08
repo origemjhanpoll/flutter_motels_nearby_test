@@ -30,13 +30,16 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
             SliverAppBar(
               systemOverlayStyle: SystemUiOverlayStyle.light,
               forceMaterialTransparency: true,
-              expandedHeight: screen.height * 0.3,
+              expandedHeight: screen.height * 0.4,
               pinned: true,
-              flexibleSpace: GalleryWidget(
-                borderRadius:
-                    BorderRadius.vertical(bottom: Radius.circular(48.0)),
-                size: Size.fromHeight(screen.height * 0.5),
-                gallery: widget.suite.photos,
+              flexibleSpace: Hero(
+                tag: Key(widget.suite.photos.first),
+                child: GalleryWidget(
+                  borderRadius:
+                      BorderRadius.vertical(bottom: Radius.circular(48.0)),
+                  size: Size.fromHeight(screen.height * 0.5),
+                  gallery: widget.suite.photos,
+                ),
               ),
               automaticallyImplyLeading: false,
               actions: [

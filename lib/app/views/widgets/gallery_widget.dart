@@ -58,6 +58,15 @@ class _GalleryWidgetState extends State<GalleryWidget> {
               itemBuilder: (context, index) {
                 final image = widget.gallery[index];
                 return CachedNetworkImage(
+                  progressIndicatorBuilder: (context, url, progress) =>
+                      DecoratedBox(
+                    decoration: BoxDecoration(color: Colors.white),
+                    child: Center(
+                      child: CircularProgressIndicator(
+                        value: progress.progress,
+                      ),
+                    ),
+                  ),
                   imageUrl: image,
                   fit: BoxFit.cover,
                 );
