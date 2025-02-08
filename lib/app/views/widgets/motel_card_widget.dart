@@ -52,8 +52,10 @@ class _MotelCardWidgetState extends State<MotelCardWidget> {
                 onTap: (value) => goNewPage(
                     fullscreenDialog: true,
                     context: context,
-                    child:
-                        SuiteDetailPage(suite: widget.suites[_currentIndex])),
+                    child: SuiteDetailPage(
+                      suite: widget.suites[_currentIndex],
+                      motelName: widget.name,
+                    )),
                 gallery: widget.gallery,
                 onGalleryChanged: (index) {
                   setState(() {

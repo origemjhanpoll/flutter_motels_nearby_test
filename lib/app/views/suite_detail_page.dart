@@ -9,9 +9,11 @@ import 'package:flutter_motels_nearby_test/core/constants/padding_size.dart';
 import 'package:flutter_motels_nearby_test/core/utils/go_next_page.dart';
 
 class SuiteDetailPage extends StatefulWidget {
+  final String motelName;
   final SuiteModel suite;
 
-  const SuiteDetailPage({super.key, required this.suite});
+  const SuiteDetailPage(
+      {super.key, required this.suite, required this.motelName});
 
   @override
   State<SuiteDetailPage> createState() => _SuiteDetailPageState();
@@ -33,19 +35,16 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
               forceMaterialTransparency: true,
               expandedHeight: screen.height * 0.4,
               pinned: true,
-              flexibleSpace: Hero(
-                tag: Key(widget.suite.photos.first),
-                child: GalleryWidget(
-                  onGalleryChanged: (value) {
-                    setState(() {
-                      _galleryIndex = value;
-                    });
-                  },
-                  borderRadius:
-                      BorderRadius.vertical(bottom: Radius.circular(48.0)),
-                  size: Size.fromHeight(screen.height * 0.5),
-                  gallery: widget.suite.photos,
-                ),
+              flexibleSpace: GalleryWidget(
+                onGalleryChanged: (value) {
+                  setState(() {
+                    _galleryIndex = value;
+                  });
+                },
+                borderRadius:
+                    BorderRadius.vertical(bottom: Radius.circular(48.0)),
+                size: Size.fromHeight(screen.height * 0.5),
+                gallery: widget.suite.photos,
               ),
               automaticallyImplyLeading: false,
               actions: [
@@ -71,10 +70,12 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
                                 backgroundColor: WidgetStatePropertyAll(
                                     Colors.black45.withValues(alpha: 0.2))),
                             color: theme.colorScheme.onPrimary,
-                            icon: Icon(Icons.fit_screen_rounded),
-                            onPressed: () => showImage(
-                                context: context,
-                                image: widget.suite.photos[_galleryIndex]),
+                            icon: Icon(Icons.aspect_ratio),
+                            onPressed: () => showAnimatedDialog(
+                              context: context,
+                              images: widget.suite.photos,
+                              initialImage: _galleryIndex,
+                            ),
                           ),
                         ),
                       ),
@@ -128,11 +129,7 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
                   contentPadding: EdgeInsets.zero,
                   titleTextStyle: theme.textTheme.titleLarge!
                       .copyWith(fontWeight: FontWeight.bold),
-                  subtitle: Text(
-                    widget.suite.quantity > 1
-                        ? '${widget.suite.quantity} Unidades'
-                        : '${widget.suite.quantity} Unidade',
-                  ),
+                  subtitle: Text(widget.motelName),
                 ),
                 DecoratedBox(
                   decoration: BoxDecoration(
@@ -261,28 +258,80 @@ class _SuiteDetailPageState extends State<SuiteDetailPage> {
     );
   }
 
-  Future<dynamic> showImage(
-      {required BuildContext context, required String image}) {
-    return showDialog(
-        useSafeArea: false,
-        context: context,
-        barrierColor: Colors.black.withValues(alpha: 0.9),
-        builder: (context) {
-          return GestureDetector(
-            onTap: () => Navigator.of(context).pop(),
-            child: CachedNetworkImage(
-              imageUrl: image,
-              progressIndicatorBuilder: (context, url, progress) =>
-                  DecoratedBox(
-                decoration: BoxDecoration(color: Colors.white),
-                child: Center(
-                  child: CircularProgressIndicator(
-                    value: progress.progress,
+  void showAnimatedDialog({
+    required BuildContext context,
+    required List<String> images,
+    int initialImage = 0,
+  }) {
+    showDialog(
+      context: context,
+      barrierColor: Colors.black,
+      builder: (context) {
+        return Stack(
+          children: [
+            TweenAnimationBuilder<double>(
+              tween: Tween(begin: 0.8, end: 1.0),
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeOutBack,
+              builder: (context, scale, child) {
+                return Transform.scale(
+                  scale: scale,
+                  child: Center(
+                    child: PageView.builder(
+                      controller: PageController(initialPage: initialImage),
+                      itemCount: images.length,
+                      itemBuilder: (context, index) {
+                        final image = images[index];
+                        return CachedNetworkImage(
+                          progressIndicatorBuilder: (context, url, progress) =>
+                              Center(
+                            child: CircularProgressIndicator(
+                              value: progress.progress,
+                            ),
+                          ),
+                          imageUrl: image,
+                          fit: BoxFit.contain,
+                        );
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
+            Positioned(
+              right: 16,
+              top: 2,
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.white.withValues(alpha: 0.5),
+                    width: 2,
+                  ),
+                ),
+                child: SizedBox.square(
+                  dimension: 40,
+                  child: ClipOval(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: IconButton(
+                        style: ButtonStyle(
+                          backgroundColor: WidgetStatePropertyAll(
+                            Colors.black45.withValues(alpha: 0.2),
+                          ),
+                        ),
+                        color: Colors.white,
+                        icon: const Icon(Icons.close),
+                        onPressed: () => Navigator.of(context).pop(),
+                      ),
+                    ),
                   ),
                 ),
               ),
             ),
-          );
-        });
+          ],
+        );
+      },
+    );
   }
 }

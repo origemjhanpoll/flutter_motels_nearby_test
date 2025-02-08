@@ -44,7 +44,10 @@ class _SuitesListPageState extends State<SuitesListPage> {
           itemCount: widget.suites.length,
           padding: EdgeInsets.all(PaddingSize.medium),
           itemBuilder: (context, index) {
-            return _SuiteCard(suite: widget.suites[index]);
+            return _SuiteCard(
+              suite: widget.suites[index],
+              motelName: widget.title,
+            );
           },
         ),
       ),
@@ -54,8 +57,9 @@ class _SuitesListPageState extends State<SuitesListPage> {
 
 class _SuiteCard extends StatefulWidget {
   final SuiteModel suite;
+  final String motelName;
 
-  const _SuiteCard({required this.suite});
+  const _SuiteCard({required this.suite, required this.motelName});
 
   @override
   State<_SuiteCard> createState() => _SuiteCardState();
@@ -71,7 +75,10 @@ class _SuiteCardState extends State<_SuiteCard> {
     return GestureDetector(
       onTap: () => goNewPage(
           fullscreenDialog: true,
-          child: SuiteDetailPage(suite: widget.suite),
+          child: SuiteDetailPage(
+            suite: widget.suite,
+            motelName: widget.motelName,
+          ),
           context: context),
       child: Card(
         color: theme.primaryColor,
@@ -80,16 +87,13 @@ class _SuiteCardState extends State<_SuiteCard> {
           children: [
             Stack(
               children: [
-                Hero(
-                  tag: Key(widget.suite.photos.first),
-                  child: GalleryWidget(
-                      onGalleryChanged: (value) {
-                        setState(() {
-                          _galleryIndex = value;
-                        });
-                      },
-                      gallery: widget.suite.photos),
-                ),
+                GalleryWidget(
+                    onGalleryChanged: (value) {
+                      setState(() {
+                        _galleryIndex = value;
+                      });
+                    },
+                    gallery: widget.suite.photos),
                 Padding(
                   padding: EdgeInsets.only(
                     top: PaddingSize.medium,
