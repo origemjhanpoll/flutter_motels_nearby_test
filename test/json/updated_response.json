@@ -1100,6 +1100,8 @@
               "https://cdn.guiademoteis.com.br/imagens/suites/default_10.jpg",
               "https://cdn.guiademoteis.com.br/imagens/suites/default_3.jpg"
             ],
+            "itens": [],
+            "categoriaItens": [],
             "periodos": [
               {
                 "tempoFormatado": "2 horas",
