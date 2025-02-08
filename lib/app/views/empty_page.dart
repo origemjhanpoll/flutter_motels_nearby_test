@@ -14,6 +14,7 @@ class EmptyPage extends StatelessWidget {
     return Scaffold(
       appBar: title != null
           ? AppBar(
+              leadingWidth: 76,
               leading: BackButton(
                 style: ButtonStyle(
                   backgroundColor:

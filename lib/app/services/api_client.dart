@@ -7,7 +7,7 @@ class ApiClient {
   ApiClient({required this.client});
 
   final _url =
-      'https://raw.githubusercontent.com/origemjhanpoll/flutter_motels_nearby_test/refs/heads/main/test/json/response2.json';
+      'https://raw.githubusercontent.com/origemjhanpoll/flutter_motels_nearby_test/refs/heads/main/test/json/response.json';
 
   Future<ResponseModel> fetchMotels() async {
     final response = await client.get(Uri.parse(_url));

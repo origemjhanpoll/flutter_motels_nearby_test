@@ -6,10 +6,14 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class GalleryWidget extends StatefulWidget {
   final List<String> gallery;
   final ValueChanged<int>? onGalleryChanged;
+  final Size? size;
+  final BorderRadius? borderRadius;
   const GalleryWidget({
     super.key,
     required this.gallery,
     this.onGalleryChanged,
+    this.size,
+    this.borderRadius,
   });
 
   @override
@@ -35,13 +39,14 @@ class _GalleryWidgetState extends State<GalleryWidget> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(24.0),
+      borderRadius: widget.borderRadius ?? BorderRadius.circular(24.0),
       child: SizedBox.fromSize(
-        size: const Size.fromHeight(200),
+        size: widget.size ?? const Size.fromHeight(200),
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
             PageView.builder(
+              physics: ClampingScrollPhysics(),
               controller: _pageController,
               itemCount: widget.gallery.length,
               onPageChanged: (index) {
