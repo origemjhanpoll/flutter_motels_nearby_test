@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_motels_nearby_test/core/shared/back_button_custom_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class EmptyPage extends StatelessWidget {
@@ -13,23 +14,7 @@ class EmptyPage extends StatelessWidget {
 
     return Scaffold(
       appBar: title != null
-          ? AppBar(
-              leadingWidth: 76,
-              leading: BackButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      WidgetStatePropertyAll(theme.colorScheme.primary),
-                  iconSize: WidgetStatePropertyAll(20.0),
-                  iconColor:
-                      WidgetStatePropertyAll(theme.colorScheme.onPrimary),
-                  shape: WidgetStatePropertyAll(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                  ),
-                ),
-              ),
-              title: Text(title!))
+          ? AppBar(leading: BackButtonCustomWidget(), title: Text(title!))
           : null,
       body: SafeArea(
         child: Center(

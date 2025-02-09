@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_motels_nearby_test/app/views/motels_list_page.dart';
+import 'package:flutter_motels_nearby_test/app/views/pages/motels_list_page.dart';
+import 'package:flutter_motels_nearby_test/app/views/pages/web_blocked_view.dart';
 import 'package:flutter_motels_nearby_test/core/theme/theme.dart';
 
 class App extends StatelessWidget {
@@ -11,7 +13,7 @@ class App extends StatelessWidget {
       title: 'Motels Nearby',
       debugShowCheckedModeBanner: false,
       theme: ThemeCustom.theme,
-      home: const MotelsListPage(),
+      home: kIsWeb ? const WebBlockedView() : const MotelsListPage(),
     );
   }
 }

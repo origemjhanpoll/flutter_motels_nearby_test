@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_motels_nearby_test/app/viewmodel/motels_viewmodel.dart';
-import 'package:flutter_motels_nearby_test/app/views/suites_list_page.dart';
-import 'package:flutter_motels_nearby_test/app/views/widgets/motel_card_widget.dart';
+import 'package:flutter_motels_nearby_test/app/views/pages/suite_detail_page.dart';
+import 'package:flutter_motels_nearby_test/app/views/pages/suites_list_page.dart';
+import 'package:flutter_motels_nearby_test/app/views/molecules/motel_card_widget.dart';
 import 'package:flutter_motels_nearby_test/core/constants/padding_size.dart';
 import 'package:flutter_motels_nearby_test/core/shared/app_bar_widget.dart';
 import 'package:flutter_motels_nearby_test/core/utils/go_next_page.dart';
@@ -67,6 +68,13 @@ class _MotelsListPageState extends State<MotelsListPage> {
                               child: SuitesListPage(
                                   title: motel.name, suites: motel.suites),
                             ),
+                            onSuiteTap: (suite) => goNewPage(
+                                fullscreenDialog: true,
+                                context: context,
+                                child: SuiteDetailPage(
+                                  suite: suite,
+                                  motelName: motel.name,
+                                )),
                             name: motel.name,
                             neighborhood: motel.neighborhood,
                             logo: motel.logo,
