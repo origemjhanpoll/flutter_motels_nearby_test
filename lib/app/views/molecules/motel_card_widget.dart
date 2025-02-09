@@ -87,7 +87,8 @@ class _MotelCardWidgetState extends State<MotelCardWidget> {
             ],
           ),
         ),
-        if (widget.suites[_currentIndex].periods.isNotEmpty)
+        if (widget.suites.isNotEmpty &&
+            widget.suites[_currentIndex].period.$1 != null)
           Builder(builder: (context) {
             final period = widget.suites[_currentIndex].period;
             return Align(
@@ -95,7 +96,8 @@ class _MotelCardWidgetState extends State<MotelCardWidget> {
               child: Padding(
                   padding: EdgeInsets.only(
                       top: PaddingSize.small, right: PaddingSize.small),
-                  child: ModelDiscountPriceTagWidget(period: period)),
+                  child: ModelDiscountPriceTagWidget(
+                      period: (period.$1!, period.$2))),
             );
           }),
         Align(

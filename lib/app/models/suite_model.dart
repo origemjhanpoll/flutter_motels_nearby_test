@@ -22,7 +22,11 @@ class SuiteModel with _$SuiteModel {
   factory SuiteModel.fromJson(Map<String, dynamic> json) =>
       _$SuiteModelFromJson(json);
 
-  (PeriodModel, bool) get period {
+  (PeriodModel?, bool) get period {
+    if (periods.isEmpty) {
+      return (null, false);
+    }
+
     final periodsWithDiscount =
         periods.where((p) => p.discount != null).toList();
     final periodsWithoutDiscount =

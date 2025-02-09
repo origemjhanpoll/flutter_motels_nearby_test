@@ -97,48 +97,49 @@ class SuiteCardWidgetState extends State<SuiteCardWidget> {
                 ),
               ],
             ),
-            Center(
-              child: Padding(
-                padding: EdgeInsets.all(PaddingSize.medium)
-                    .copyWith(top: PaddingSize.small),
-                child: Text.rich(
-                  maxLines: 1,
-                  TextSpan(children: [
-                    if (widget.suite.period.$2)
+            if (widget.suite.period.$1 != null)
+              Center(
+                child: Padding(
+                  padding: EdgeInsets.all(PaddingSize.medium)
+                      .copyWith(top: PaddingSize.small),
+                  child: Text.rich(
+                    maxLines: 1,
+                    TextSpan(children: [
+                      if (widget.suite.period.$2)
+                        TextSpan(
+                            text: 'de ',
+                            style: theme.textTheme.bodyLarge!.copyWith(
+                              color: Colors.white70,
+                            )),
+                      if (widget.suite.period.$2)
+                        TextSpan(
+                            text: 'R\$ ${widget.suite.period.$1!.price}',
+                            style: theme.textTheme.titleLarge!.copyWith(
+                              color: Colors.white70,
+                              decoration: TextDecoration.lineThrough,
+                              decorationThickness: 2,
+                              decorationColor: Colors.white38,
+                            )),
+                      if (widget.suite.period.$2)
+                        TextSpan(
+                            text: ' por ',
+                            style: theme.textTheme.bodyLarge!.copyWith(
+                              color: Colors.white70,
+                            )),
                       TextSpan(
-                          text: 'de ',
-                          style: theme.textTheme.bodyLarge!.copyWith(
-                            color: Colors.white70,
-                          )),
-                    if (widget.suite.period.$2)
-                      TextSpan(
-                          text: 'R\$ ${widget.suite.period.$1.price}',
+                          text: 'R\$ ${widget.suite.period.$1!.totalPrice}',
                           style: theme.textTheme.titleLarge!.copyWith(
-                            color: Colors.white70,
-                            decoration: TextDecoration.lineThrough,
-                            decorationThickness: 2,
-                            decorationColor: Colors.white38,
+                            fontWeight: FontWeight.bold,
+                            color: theme.colorScheme.onPrimary,
                           )),
-                    if (widget.suite.period.$2)
                       TextSpan(
-                          text: ' por ',
-                          style: theme.textTheme.bodyLarge!.copyWith(
-                            color: Colors.white70,
-                          )),
-                    TextSpan(
-                        text: 'R\$ ${widget.suite.period.$1.totalPrice}',
-                        style: theme.textTheme.titleLarge!.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: theme.colorScheme.onPrimary,
-                        )),
-                    TextSpan(
-                        text: '/${widget.suite.period.$1.time}h',
-                        style: theme.textTheme.labelSmall!
-                            .copyWith(color: Colors.white70))
-                  ]),
+                          text: '/${widget.suite.period.$1!.time}h',
+                          style: theme.textTheme.labelSmall!
+                              .copyWith(color: Colors.white70))
+                    ]),
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ),

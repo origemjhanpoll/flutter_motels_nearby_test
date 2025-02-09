@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_motels_nearby_test/core/constants/padding_size.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class WebBlockedView extends StatelessWidget {
-  const WebBlockedView({super.key});
+class WebBlockedPage extends StatelessWidget {
+  const WebBlockedPage({super.key});
 
   @override
   Widget build(BuildContext context) {
